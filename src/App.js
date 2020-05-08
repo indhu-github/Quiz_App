@@ -68,13 +68,13 @@ function App() {
     setCurrentAns(e.target.value);
     setError("");
   };
-  //const count = 0;
+
   const renderResultsProgress = (question, answer) => {
     if (question.correct_ans === answer.answer) {
-      setMarks(marks + 1);
+      //setMarks(marks + 1);
       return <span className="correct">Correct</span>;
     }
-    return <span classname="failed">Failed</span>;
+    return <span className="failed">Failed</span>;
   };
   const renderError = () => {
     if (!error) {
@@ -90,7 +90,6 @@ function App() {
       );
       return (
         <div key={question.id}>
-          <h1>You have scored:{marks} in this quiz</h1>
           {question.question} - {renderResultsProgress(question, answer)}
         </div>
       );
@@ -101,6 +100,7 @@ function App() {
     setCurrentAns("");
     setCurrentQues(0);
     setShowResults(false);
+    setMarks(0);
   };
   const next = () => {
     const answer = { questionId: question.id, answer: currentAns };
@@ -114,7 +114,6 @@ function App() {
 
     if (currentQues + 1 < questions.length) {
       setCurrentQues(currentQues + 1);
-      return;
     }
     setShowResults(true);
   };
@@ -122,6 +121,7 @@ function App() {
     return (
       <div className="container results">
         <h2>Results</h2>
+        <h2>You scored :{marks}</h2>
         <ul>{renderResultsData()}</ul>
         <button className="btn btn-primary" onClick={restart}>
           Restart
