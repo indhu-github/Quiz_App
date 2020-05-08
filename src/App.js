@@ -68,7 +68,7 @@ function App() {
     setCurrentAns(e.target.value);
     setError("");
   };
-  const count = 0;
+  //const count = 0;
   const renderResultsProgress = (question, answer) => {
     if (question.correct_ans === answer.answer) {
       setMarks(marks + 1);

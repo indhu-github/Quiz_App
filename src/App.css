@@ -1,5 +1,5 @@
 .container {
-  background-color: #282c34;
+  background-color: #00008b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,17 +24,17 @@ h2 {
   position: relative;
   font-size: 22px;
   cursor: pointer;
-  transition: ease-in-out, width 0.35s ease-in-out;
+  border-radius: 25px;
 }
 
 .answer.selected {
   color: #4f4c4c;
-  background-color: #c8ffbb;
+  background-color: yellow;
 }
 
 .answer:hover {
-  color: #4f4c4c;
-  background-color: #c8ffbb;
+  color: mediumseagreen;
+  background-color: green;
 }
 
 .answer:focus {
