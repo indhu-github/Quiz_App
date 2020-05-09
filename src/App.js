@@ -71,7 +71,7 @@ function App() {
 
   const renderResultsProgress = (question, answer) => {
     if (question.correct_ans === answer.answer) {
-      //setMarks(marks + 1);
+      // setMarks(marks + 1);
       return <span className="correct">Correct</span>;
     }
     return <span className="failed">Failed</span>;
@@ -112,10 +112,15 @@ function App() {
     setAnswers(answers);
     setCurrentAns("");
 
+    if (questions[currentQues].correct_ans === answers[currentQues].answer) {
+      setMarks(marks + 1);
+    }
+
     if (currentQues + 1 < questions.length) {
       setCurrentQues(currentQues + 1);
+    } else {
+      setShowResults(true);
     }
-    setShowResults(true);
   };
   if (showResults) {
     return (

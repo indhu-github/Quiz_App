@@ -50,7 +50,7 @@ h2 {
 }
 
 .error {
-  color:red;
+  color: #f27c7c;
 }
 
 .option {
@@ -73,6 +73,7 @@ h2 {
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
+  border-radius: 25px;
 }
 
 .btn-primary {
