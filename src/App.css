@@ -34,7 +34,7 @@ h2 {
 
 .answer:hover {
   color: mediumseagreen;
-  background-color: green;
+  background-color: pale green;
 }
 
 .answer:focus {
@@ -42,11 +42,11 @@ h2 {
 }
 
 .results span.correct {
-  color: #c8ffbb;
+  color: green;
 }
 
 .results span.failed {
-  color: #f27c7c;
+  color: red;
 }
 
 .error {
@@ -80,4 +80,5 @@ h2 {
   color: #4f4c4c;
   background-color: #ffc107;
   font-weight: bold;
+  border-radius: 25px;
 }

@@ -127,6 +127,7 @@ function App() {
       <div className="container results">
         <h2>Results</h2>
         <h2>You scored :{marks}</h2>
+        <h3>{marks >= 4 ? "Excellent" : "Practice more and keep going"}</h3>
         <ul>{renderResultsData()}</ul>
         <button className="btn btn-primary" onClick={restart}>
           Restart
